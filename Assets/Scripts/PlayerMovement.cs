@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     public float movementSpeed = 5f;
+    public GameObject following;
    
     void FixedUpdate()
     {
@@ -18,4 +19,5 @@ public class PlayerMovement : MonoBehaviour
         transform.position = transform.position + new Vector3(moveHorizonal * movementSpeed *Time.deltaTime, moveVertical * movementSpeed * Time.deltaTime, 0);
 
     }
+    
 }

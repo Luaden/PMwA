@@ -10,6 +10,6 @@ public class Follow : MonoBehaviour
 
     void Update()
     {
-        Followplatform.position = new Vector3(0, Player.position.y, -10);
+        Followplatform.position = new Vector3(0, Player.position.y + 3, -10);
     }
 }

@@ -6,11 +6,12 @@ TagManager:
   tags:
   - Hole
   - Weapon
+  - PlayerTag
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Pewpew
   - Water
   - UI
   - 

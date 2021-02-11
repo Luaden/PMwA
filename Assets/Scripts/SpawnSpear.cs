@@ -4,27 +4,42 @@ using UnityEngine;
 
 public class SpawnSpear : MonoBehaviour
 {
-    public GameObject spear;
+    [SerializeField] protected Transform playerTransform;
+    [SerializeField] protected GameObject spearObject;
+    [SerializeField] protected float spawnTimer;
+    [SerializeField] protected Vector2 spearXOffsetMinMax;
+    [SerializeField]
+    protected float spawnYOffset;
 
-    // Start is called before the first frame update
-    void Start()
+    protected Transform camTransform;
+
+    protected float currentTimer;
+
+    protected void Awake()
     {
-        
+        camTransform = GetComponent<Transform>();
     }
 
-    // Update is called once per frame
-    void FixedUpdate()
+    protected void Update()
     {
-        
+        TimerCountdown();
     }
 
-    void SpawnWeapon()
+    protected void TimerCountdown()
     {
-        Debug.Log("Spawned a spear :3");
-        int xPos = Random.Range(-7, 7);
-        int yPos = Random.Range(-4, 4);
-        GameObject a = Instantiate(spear) as GameObject;
-        a.transform.position = new Vector2(xPos, yPos);
+        if (currentTimer <= 0f)
+        {
+            currentTimer = spawnTimer;
+            SpawnWeapon();
+        }
+        currentTimer -= Time.deltaTime;
+    }
+    protected void SpawnWeapon()
+    {
+        float xPos = Random.Range(spearXOffsetMinMax.x, spearXOffsetMinMax.y);
+        xPos = Random.Range(xPos + playerTransform.position.x, playerTransform.position.x - xPos);
+        float yPos = transform.position.y + spawnYOffset;
 
+        GameObject newSpear = Instantiate(spearObject, new Vector3(xPos, yPos, 0), Quaternion.identity, this.transform);
     }
 }

@@ -11,6 +11,7 @@ public class CollideWithSpear : MonoBehaviour
             GameObject.FindWithTag("MainCamera").GetComponent<Follow>().enabled = false;
             GameObject.FindWithTag("PlayerTag").GetComponent<Rigidbody2D>().gravityScale = 1f;
             GameObject.FindWithTag("PlayerTag").GetComponent<PlayerMovement>().enabled = false;
+           
         }
     }
 }

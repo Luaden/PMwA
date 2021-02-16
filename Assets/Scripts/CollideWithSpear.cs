@@ -16,6 +16,9 @@ public class CollideWithSpear : MonoBehaviour
         if (collision.collider.tag == "Weapon")
         {
             Debug.Log("Ouch");
+            AudioManager.instance.PlaySound("Skrik1");
+            AudioManager.instance.PlaySound("Skrik2");
+            AudioManager.instance.PlaySound("Lose");
             GameObject.FindWithTag("PlayerTag").GetComponent<Rigidbody2D>().freezeRotation = false;
             GameObject.FindWithTag("MainCamera").GetComponent<Follow>().enabled = false;
             GameObject.FindWithTag("PlayerTag").GetComponent<Rigidbody2D>().gravityScale = 1f;

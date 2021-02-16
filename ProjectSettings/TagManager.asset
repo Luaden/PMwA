@@ -8,6 +8,7 @@ TagManager:
   - Weapon
   - PlayerTag
   - Delete
+  - Canvas
   layers:
   - Default
   - TransparentFX

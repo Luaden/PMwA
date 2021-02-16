@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SpawnHole : MonoBehaviour
 {
@@ -16,7 +17,10 @@ public class SpawnHole : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (transform.position.y == 50)
+        {
+            SceneManager.LoadScene(2);
+        }
     }
   
 

@@ -6,11 +6,12 @@ using UnityEngine.SceneManagement;
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] float movementSpeed = 5f;
-   
+    [SerializeField] float treshold = 20f;
+
     void Update()
     {
         move();
-      if (transform.position.y == 20)
+      if (transform.position.y > treshold)
         {
             SceneManager.LoadScene(2);
         }
@@ -22,5 +23,6 @@ public class PlayerMovement : MonoBehaviour
         float moveHorizonal = Input.GetAxis("Horizontal");
         Vector2 movement = new Vector2(moveHorizonal, moveVertical);
         transform.position = transform.position + new Vector3(moveHorizonal * movementSpeed * Time.deltaTime, moveVertical * movementSpeed * Time.deltaTime, 0);
+        AudioManager.instance.PlayMusic("Klättra");
     }
 }

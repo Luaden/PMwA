@@ -77,8 +77,6 @@ public class AudioManager : MonoBehaviour
             shouldPlayMusic = true;
             // pick a random song from our playlist
             currentPlayingIndex = UnityEngine.Random.Range(0, playlist.Length - 1);
-            playlist[currentPlayingIndex].source.volume = playlist[0].volume * mvol; // set the volume
-            playlist[currentPlayingIndex].source.Play(); // play it
         }
 
     }
@@ -96,15 +94,7 @@ public class AudioManager : MonoBehaviour
     void Update()
     {
         // if we are playing a track from the playlist && it has stopped playing
-        if (currentPlayingIndex != 999 && !playlist[currentPlayingIndex].source.isPlaying)
-        {
-            currentPlayingIndex++; // set next index
-            if (currentPlayingIndex >= playlist.Length)
-            { //have we went too high
-                currentPlayingIndex = 0; // reset list when max reached
-            }
-            playlist[currentPlayingIndex].source.Play(); // play that funky music
-        }
+       
     }
 
     // get the song name

@@ -31,6 +31,8 @@ public class SpawnSpear : MonoBehaviour
         {
             currentTimer = spawnTimer;
             SpawnWeapon();
+            AudioManager.instance.PlaySound("Spjut");
+           
         }
         currentTimer -= Time.deltaTime;
     }
@@ -39,7 +41,7 @@ public class SpawnSpear : MonoBehaviour
         float xPos = Random.Range(spearXOffsetMinMax.x, spearXOffsetMinMax.y);
         xPos = Random.Range(xPos + playerTransform.position.x, playerTransform.position.x - xPos);
         float yPos = transform.position.y + spawnYOffset;
-
         GameObject newSpear = Instantiate(spearObject, new Vector3(xPos, yPos, 0), Quaternion.identity, this.transform);
+       
     }
 }

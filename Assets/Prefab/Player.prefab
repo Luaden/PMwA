@@ -137,6 +137,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 5
+  treshold: 40
 --- !u!114 &569729007840654314
 MonoBehaviour:
   m_ObjectHideFlags: 0

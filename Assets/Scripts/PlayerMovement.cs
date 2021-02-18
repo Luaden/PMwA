@@ -15,6 +15,12 @@ public class PlayerMovement : MonoBehaviour
         {
             SceneManager.LoadScene(2);
         }
+      if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Debug.Log("Quitting");
+            Application.Quit();
+
+        }
     }
 
     void move()

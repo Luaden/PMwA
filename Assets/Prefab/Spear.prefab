@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5369314183574718346}
   - component: {fileID: 5369314183574718347}
   - component: {fileID: 5369314183574718345}
-  - component: {fileID: 5008255559792541481}
+  - component: {fileID: 8957887485490837465}
   m_Layer: 3
   m_Name: Spear
   m_TagString: Weapon
@@ -27,8 +27,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5369314183574718350}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.5708, y: 5.0505, z: -2.949402}
-  m_LocalScale: {x: 0.2, y: 0.2, z: 1}
+  m_LocalPosition: {x: -3.2721, y: 2.9175, z: -2.949402}
+  m_LocalScale: {x: 0.06428409, y: 0.07928673, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -73,10 +73,10 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: edcd3e2e368a1f64ba9fbf3983ce7429, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1e9f4580189b1fb4c9e372e6e748881e, type: 3}
   m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_FlipX: 0
-  m_FlipY: 0
+  m_FlipY: 1
   m_DrawMode: 0
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
@@ -105,7 +105,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!70 &5008255559792541481
+--- !u!70 &8957887485490837465
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -119,5 +119,5 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_Size: {x: 3.6, y: 7.1999993}
+  m_Size: {x: 25.072763, y: 35.34}
   m_Direction: 0
